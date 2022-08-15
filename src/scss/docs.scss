@@ -1,0 +1,44 @@
+.documents {
+    &-categories {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    &-item {
+        border: $border;
+        background-color: $lightgraycolor;
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('padding-right', 20, 10, 1);
+        justify-content: space-between;
+
+        gap: 20px;
+        &__info {
+            @include adaptiv-value('gap', 20, 10, 1);
+            @include adaptiv-value('padding', 30, 12, 1);
+            @include adaptiv-value('font-size', 16, 14, 1);
+            display: flex;
+            align-items: center;
+            border-right: $border;
+            width: 100%;
+            img {
+                @include adaptiv-value('width', 32, 28, 1);
+                @include adaptiv-value('height', 32, 28, 1);
+            }
+        }
+    }
+}
+
+.page-content {
+    &.documents {
+        gap: 0;
+    }
+}

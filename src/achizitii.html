@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Rezina - Achiziții Publice'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html') @@include('./components/breadcrumbs.html')
+            <main>
+                <div class="page-links">
+                    <div class="page-links__container">
+                        <div class="grid grid-3 gap-2">
+                            <a href="#" class="button button__gray big">
+                                <span class="link-count"></span> Proceduri
+                            </a>
+                            <a href="#" class="button button__gray big">
+                                <span class="link-count"></span> Planificare
+                            </a>
+                            <a href="#" class="button button__gray big">
+                                <span class="link-count"></span> Contracte atribuite
+                            </a>
+                            <a href="#" class="button button__gray big">
+                                <span class="link-count"></span> Instrucțiuni
+                            </a>
+                            <a href="#" class="button button__gray big">
+                                <span class="link-count"></span> Anunțuri
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

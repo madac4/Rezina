@@ -1,0 +1,19 @@
+.contacts-page {
+    .form-block {
+        border: $border;
+        background-color: $lightgraycolor;
+        @include adaptiv-value('padding', 20, 10, 1);
+        form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            @include adaptiv-value('grid-gap', 20, 10, 1);
+            label:nth-child(5) {
+                grid-column: 4 span;
+            }
+            button {
+                grid-column: 4 span;
+                font-size: 16px;
+            }
+        }
+    }
+}

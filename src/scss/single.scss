@@ -1,0 +1,34 @@
+.single-page {
+    &__content {
+        border: $border;
+        background-color: $lightgraycolor;
+        @include adaptiv-value('padding', 30, 20, 1);
+        @include adaptiv-value('margin-bottom', 70, 40, 1);
+        h6 {
+            margin-bottom: 20px;
+            &:first-child {
+                text-align: center;
+            }
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        ul,
+        ol {
+            padding-left: 15px;
+            margin-bottom: 20px;
+            li {
+                list-style-type: disc;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        em {
+            font-weight: 600;
+            float: right;
+        }
+    }
+}

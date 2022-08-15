@@ -1,0 +1,48 @@
+.pagination {
+    padding: 0 15px;
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        &__item {
+            &.current {
+                a {
+                    background-color: $accentcolor;
+                    color: #fff;
+                    border: 1px solid $accentcolor;
+                }
+            }
+            &:hover {
+                a {
+                    background-color: $accentcolor;
+                    color: #fff;
+                }
+            }
+            &.prev,
+            &.next {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include adaptiv-value('width', 44, 38, 1);
+                    @include adaptiv-value('height', 44, 38, 1);
+                    font-size: 24px;
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                justify-content: center;
+                background: $lightgraycolor;
+                color: $graycolor;
+                border: $border;
+                transition: 0.3s;
+                @include adaptiv-value('width', 44, 38, 1);
+                @include adaptiv-value('height', 44, 38, 1);
+            }
+        }
+    }
+}

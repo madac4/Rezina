@@ -1,0 +1,90 @@
+.footer {
+    @include adaptiv-value('padding-top', 50, 30, 1);
+    @include adaptiv-value('margin-top', 50, 30, 1);
+    background-color: $lightgraycolor;
+    &__container {
+        display: flex;
+        @include adaptiv-value('grid-gap', 90, 30, 1);
+        @media (max-width: $tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            @include adaptiv-value('grid-gap', 40, 30, 1);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            place-items: center;
+        }
+    }
+    &__logo {
+        @media (max-width: $tablet) {
+            grid-column: 3 span;
+            place-self: center;
+        }
+        @media (max-width: $mobile) {
+            grid-column: 1 span;
+        }
+        img {
+        }
+    }
+    &__column {
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+        h6 {
+            @include adaptiv-value('margin-bottom', 30, 15, 1);
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            @include adaptiv-value('gap', 30, 10, 1);
+            li {
+                display: flex;
+                align-items: center;
+                @include adaptiv-value('gap', 10, 5, 1);
+                @media (max-width: $mobile) {
+                    justify-content: center;
+                    a {
+                        justify-content: center;
+                    }
+                }
+                span {
+                    color: $graycolor;
+                    font-size: 24px;
+                }
+                a {
+                    @include adaptiv-value('gap', 10, 5, 1);
+                    display: flex;
+                    align-items: center;
+                    color: $maincolor;
+                }
+            }
+        }
+    }
+    &__socials {
+        a {
+            img {
+                transition: 0.3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    &__copyright {
+        @include adaptiv-value('margin-top', 50, 30, 1);
+        @include adaptiv-value('gap', 50, 20, 1);
+        background-color: #e9e9e9;
+        padding: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.1);
+        small {
+            font-size: 14px;
+            color: $maincolor;
+        }
+    }
+}

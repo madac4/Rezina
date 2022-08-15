@@ -1,0 +1,13 @@
+.page-links {
+    counter-reset: section;
+    &__container {
+        a {
+            .link-count {
+                &::after {
+                    counter-increment: section;
+                    content: counter(section) '.';
+                }
+            }
+        }
+    }
+}
