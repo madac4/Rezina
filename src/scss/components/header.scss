@@ -20,8 +20,8 @@
             }
         }
         img {
-            @include adaptiv-value('width', 80, 40, 1);
-            height: auto;
+            width: auto;
+            @include adaptiv-value('height', 100, 70, 1);
         }
     }
     &__search {
