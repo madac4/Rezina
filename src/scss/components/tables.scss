@@ -56,6 +56,9 @@
                         border: $border;
                         @include adaptiv-value('padding', 20, 10, 1);
                         line-height: 150%;
+                        &:last-child {
+                            min-width: 130px;
+                        }
                     }
                 }
             }

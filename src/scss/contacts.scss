@@ -7,12 +7,40 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             @include adaptiv-value('grid-gap', 20, 10, 1);
+            @media (max-width: 1110px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: $mobileSmall) {
+                grid-template-columns: repeat(1, 1fr);
+            }
             label:nth-child(5) {
                 grid-column: 4 span;
+                @media (max-width: 1110px) {
+                    grid-column: 2 span;
+                }
+                @media (max-width: $mobileSmall) {
+                    grid-column: 1 span;
+                }
             }
             button {
                 grid-column: 4 span;
                 font-size: 16px;
+                @media (max-width: 1110px) {
+                    grid-column: 2 span;
+                }
+                @media (max-width: $mobileSmall) {
+                    grid-column: 1 span;
+                }
+            }
+        }
+    }
+
+    table:not(.colored-header) {
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: $border;
+                }
             }
         }
     }
