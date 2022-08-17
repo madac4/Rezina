@@ -14,6 +14,17 @@
         }
     }
     &__logo {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('gap', 30, 10, 1);
+        h4 {
+            text-transform: uppercase;
+            color: $bluecolor;
+            white-space: nowrap;
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
         &:last-child {
             @media (max-width: $tablet) {
                 display: none;
@@ -21,7 +32,7 @@
         }
         img {
             width: auto;
-            @include adaptiv-value('height', 100, 70, 1);
+            @include adaptiv-value('height', 100, 60, 1);
         }
     }
     &__search {
@@ -126,6 +137,17 @@
                 display: flex;
                 width: 100%;
                 cursor: pointer;
+                &.icon-item {
+                    width: fit-content;
+                }
+                a[class*='icon-'] {
+                    font-size: 24px;
+                    @include adaptiv-value('padding', 20, 15, 1);
+                    background-color: $lightgraycolor;
+                    &:hover {
+                        background-color: darken($color: $lightgraycolor, $amount: 5);
+                    }
+                }
                 @media (max-width: $tablet) {
                     border: none;
                     justify-content: flex-start;
