@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Rezina - Blog'})
+
+    <body>
+        @@include('./components/header.html') @@include('./components/breadcrumbs.html')
+        <main>
+            <div class="page page-wrapper with-sidebar">
+                <div class="page-wrapper__container">
+                    <div class="page-content table-page">
+                        <div class="block-title">
+                            <h6>Harta Raionului</h6>
+                        </div>
+
+                        <div class="content-block">
+                            <img src="@img/map.svg" alt="" />
+                        </div>
+                        <div class="block-title">
+                            <h6>Harta Turistică</h6>
+                        </div>
+                        <div class="content-block">
+                            <img src="@img/book-map.jpg" alt="" />
+                        </div>
+                    </div>
+
+                    @@include('./components/sidebar.html')
+                </div>
+            </div>
+        </main>
+        @@include('./components/footer.html')
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

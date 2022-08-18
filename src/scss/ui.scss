@@ -524,3 +524,38 @@ textarea {
         }
     }
 }
+
+.content-block {
+    width: 100%;
+    border: $border;
+    @include adaptiv-value('padding', 20, 10, 1);
+    img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    span {
+        color: $graycolor;
+        text-align: center;
+        display: block;
+        @include adaptiv-value('margin-bottom', 20, 10, 1);
+    }
+    p {
+        @include adaptiv-value('margin-bottom', 30, 15, 1);
+        @include adaptiv-value('font-size', 16, 14, 1);
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+table {
+    hr {
+        opacity: 0;
+    }
+}
+
+audio {
+    width: 100%;
+}

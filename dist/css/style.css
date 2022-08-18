@@ -1023,6 +1023,67 @@ textarea:focus {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.content-block {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+@media (max-width: 1300px) {
+  .content-block {
+    padding: calc(
+                10px + 10 * ((100vw - 320px) / 980)
+            );
+  }
+}
+.content-block img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.content-block span {
+  color: #afafaf;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (max-width: 1300px) {
+  .content-block span {
+    margin-bottom: calc(
+                10px + 10 * ((100vw - 320px) / 980)
+            );
+  }
+}
+.content-block p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+@media (max-width: 1300px) {
+  .content-block p {
+    margin-bottom: calc(
+                15px + 15 * ((100vw - 320px) / 980)
+            );
+  }
+}
+@media (max-width: 1300px) {
+  .content-block p {
+    font-size: calc(
+                14px + 2 * ((100vw - 320px) / 980)
+            );
+  }
+}
+.content-block p:last-child {
+  margin-bottom: 10px;
+}
+
+table hr {
+  opacity: 0;
+}
+
+audio {
+  width: 100%;
+}
+
 .footer {
   padding-top: 50px;
   margin-top: 50px;
