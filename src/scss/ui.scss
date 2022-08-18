@@ -26,6 +26,10 @@ p {
     line-height: 155%;
 }
 
+body {
+    background-color: $bodybg;
+}
+
 .block-title {
     display: block;
     position: relative;
@@ -35,9 +39,9 @@ p {
     h6 {
         position: relative;
         display: inline-block;
+        background-color: $bodybg;
         @include adaptiv-value('padding-left', 20, 10, 1);
         @include adaptiv-value('padding-right', 20, 10, 1);
-        background-color: #fff;
         font-style: italic;
         z-index: 2;
     }

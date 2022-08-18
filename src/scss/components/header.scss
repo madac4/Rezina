@@ -21,6 +21,7 @@
             text-transform: uppercase;
             color: $bluecolor;
             white-space: nowrap;
+            @include adaptiv-value('font-size', 38, 18, 1);
             @media (max-width: $mobile) {
                 display: none;
             }
@@ -32,7 +33,7 @@
         }
         img {
             width: auto;
-            @include adaptiv-value('height', 100, 60, 1);
+            @include adaptiv-value('height', 110, 60, 1);
         }
     }
     &__search {
@@ -78,10 +79,10 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 4px;
             position: absolute;
+            z-index: 4;
             width: 100%;
             left: 0;
             top: 90%;
-            padding: 5px;
             background-color: #fff;
             opacity: 0;
             visibility: hidden;
@@ -90,14 +91,22 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 100%;
+                width: 24px;
+                height: 24px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 5px;
             }
         }
     }
     &-bottom {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        background-color: #ffff;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        background-color: #0098e4;
         position: relative;
         z-index: 3;
         @media (max-width: $tablet) {
@@ -129,13 +138,14 @@
             }
             &__item {
                 @include adaptiv-value('font-size', 16, 14, 1);
-                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                border-right: 1px solid #fff;
                 text-transform: uppercase;
                 justify-content: center;
                 align-items: center;
                 transition: 0.3s;
                 display: flex;
                 width: 100%;
+                color: #fff;
                 cursor: pointer;
                 &.icon-item {
                     width: fit-content;
@@ -143,9 +153,9 @@
                 a[class*='icon-'] {
                     font-size: 24px;
                     @include adaptiv-value('padding', 20, 15, 1);
-                    background-color: $lightgraycolor;
+                    background-color: $bluecolor;
                     &:hover {
-                        background-color: darken($color: $lightgraycolor, $amount: 5);
+                        background-color: lighten($color: $bluecolor, $amount: 5);
                     }
                 }
                 @media (max-width: $tablet) {
@@ -154,14 +164,14 @@
                     display: inline-block;
                 }
                 &:first-child {
-                    border-left: 1px solid rgba(0, 0, 0, 0.1);
+                    border-left: 1px solid #fff;
                     @media (max-width: $tablet) {
                         border: none;
                     }
                 }
                 @media (any-hover: hover) {
                     &:hover {
-                        background-color: $lightgraycolor;
+                        background-color: lighten($color: $bluecolor, $amount: 5);
                     }
                 }
 
@@ -175,6 +185,7 @@
                     width: 100%;
                     height: 100%;
                     text-align: center;
+                    color: #fff;
                     @media (max-width: $tablet) {
                         text-align: left;
                         padding: 0;
@@ -236,6 +247,7 @@
                                 display: block;
                                 text-transform: none;
                                 transition: 0.3s;
+                                color: $maincolor;
                                 @include adaptiv-value('font-size', 16, 14, 1);
                                 text-align: left;
                                 &:hover {
